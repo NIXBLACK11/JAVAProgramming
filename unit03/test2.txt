@@ -1,0 +1,3 @@
+The number of characters : 97
+The number of words : 11
+The number of lines : 5

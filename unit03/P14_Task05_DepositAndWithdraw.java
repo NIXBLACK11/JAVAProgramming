@@ -1,4 +1,5 @@
 /* 
+    1 way  having only 1 wait and one notify
     notify pulls one thread chosen by jvm out of wait state
     notifyall pulls all out of wait state
     new Thread(){
