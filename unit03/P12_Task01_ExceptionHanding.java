@@ -11,10 +11,20 @@
 // 7- obj.nullPointerException() {s.lenght() when s is null}
 // 8- obj.useOfThrow() {manually throw exception}
 // 9- obj.useOfThrows_And_Finally() {declare what possible exceptions may occur, finally always run}
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class P12_Task01_ExceptionHanding {
     public static void main(String[] args) {
         FunctionsOfException obj = new FunctionsOfException();
         obj.basicException();
+        obj.handleException();
+        obj.multipleCatch();
+        obj.inputMismatchException();
+        obj.stackOverFlowError();
+        obj.indexOutOfBoundException();
+        obj.nullPointerException();
     }
 }
 
@@ -37,15 +47,78 @@ class FunctionsOfException
             System.out.println(e.getMessage());
         }
     }
-    void multipleCatch() throws Exception
+    void multipleCatch()
     {
 
         try
         {
             int ans = a/b;
+            int arr[] = new int[10];
+            arr[11] = 1;
+
         }
-        catch (Exception e) {
-            // TODO: handle exception
+        catch (ArithmeticException e) {
+            e.printStackTrace();
         }
+        catch (ArrayIndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+    }
+    void inputMismatchException()
+    {
+        Scanner sc = new Scanner(System.in);
+        try{
+            System.out.println("Enter the string");
+            int s = sc.nextInt();
+        }
+        catch(InputMismatchException e){
+            e.printStackTrace();
+        }
+    }
+    void infiniteRecur()
+    {
+        infiniteRecur();
+    }
+    void stackOverFlowError()
+    {
+        try{
+            infiniteRecur();
+        }
+        catch(StackOverflowError e){
+            e.printStackTrace();
+        }
+    }
+    void indexOutOfBoundException()
+    {
+        try{
+            int arr[] = new int[10];
+            arr[11] = 1;
+        }
+        catch(IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+    }
+    void nullPointerException()
+    {
+        try{
+            String s = null;
+            int l = s.length();
+        }
+        catch(NullPointerException e){
+            e.printStackTrace();
+        }
+    }
+    void useOfThrow()
+    {
+        try{
+            throw new Exception("MyException");
+        }
+        catch(Exception e){
+            System.out.println(e.getLocalizedMessage());
+        }
+    }
+    void useOfThrows_And_Finally()
+    {
+        
     }
 }
