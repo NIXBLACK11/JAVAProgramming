@@ -18,13 +18,15 @@ import java.util.Scanner;
 public class P12_Task01_ExceptionHanding {
     public static void main(String[] args) {
         FunctionsOfException obj = new FunctionsOfException();
-        obj.basicException();
+        // obj.basicException();
         obj.handleException();
         obj.multipleCatch();
         obj.inputMismatchException();
         obj.stackOverFlowError();
         obj.indexOutOfBoundException();
         obj.nullPointerException();
+        obj.useOfThrow();
+        obj.useOfThrows_And_Finally();
     }
 }
 
@@ -119,6 +121,20 @@ class FunctionsOfException
     }
     void useOfThrows_And_Finally()
     {
-        
+        try{
+            int res = divide(10, 0);
+            System.out.println("Result:"+res);
+        }
+        catch(ArithmeticException e){
+            e.printStackTrace();
+        }
+        finally{
+            System.out.println("Finally block");
+        }
+    }
+
+    int divide(int a, int b)throws ArithmeticException
+    {
+        return a/b;
     }
 }
