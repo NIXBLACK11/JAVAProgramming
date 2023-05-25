@@ -1,0 +1,7 @@
+class ABC implements Connection{
+
+}
+
+Connection con = new Connection();   -->Not possible as connection is interface
+Connection con = new ABC();          -->Possible as refernce
+Connection con = ABC.getMethod();    -->If all methods are implemented

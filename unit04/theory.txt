@@ -1,0 +1,7 @@
+Types of java:--|
+                |
+                |----->J2SE (Java Standard Edition)[System oriented softwares, .exe][Awt, Swing][GUI application design]
+                |
+                |
+                |
+                |----->J2EE (Java Enterprise Edition)[Spring Boot, Spring, Maven, Struts-2, Spring Security, EJB]
