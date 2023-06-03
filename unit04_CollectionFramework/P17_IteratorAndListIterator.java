@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
+//Not for exam
 /* We have 2 iterators in Java:
  	* Iterator: next(), hasNext(), remove();
  	* ListIterator: Iterator + previous(), hasPrevious(), access next and previous index;
@@ -13,7 +14,7 @@ public class P17_IteratorAndListIterator {
 	public static void main(String[] args) {
 
 		//iterator();
-		listIterator();
+		// listIterator();
 
 	}
 

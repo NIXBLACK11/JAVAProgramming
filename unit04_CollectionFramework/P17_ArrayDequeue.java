@@ -4,6 +4,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Iterator;
 
+//Not for exam
 /*
 The ArrayDeque in Java provides a way to apply re-sizable array in addition to the implementation of the Deque interface.
 It is also known as Array Double Ended Queue or Array Deck.
@@ -25,7 +26,8 @@ public class P17_ArrayDequeue {
 		de_que.add(50);
 
 		// Iterating using for each loop
-		for (Integer element : de_que) {
+		for (Integer element : de_que)
+		{
 			// Print the corresponding element
 			System.out.println("Element : " + element);
 		}
