@@ -1,5 +1,18 @@
 package unit01;
 
+class ABCD
+{
+	int a = 11;
+	static int b = 12;
+	void m1()
+	{
+		System.out.println(a+b);
+	}
+	static void m2()
+	{
+		System.out.println(b);
+	}
+}
 public class staticandnonstaticmethodsandvariables
 {
 	public static void main(String[] args)
@@ -17,18 +30,4 @@ public class staticandnonstaticmethodsandvariables
 		ABCD.m2();
 	}
 
-}
-
-class ABCD
-{
-	int a = 11;
-	static int b = 12;
-	void m1()
-	{
-		System.out.println(a+b);
-	}
-	static void m2()
-	{
-		System.out.println(b);
-	}
 }

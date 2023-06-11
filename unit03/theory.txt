@@ -1,0 +1,31 @@
+
+In Java, exceptions are used to handle exceptional conditions or errors that occur during the execution of a program. Java provides a hierarchy of exception classes, and each exception belongs to a specific type or category. Here are some common types of exceptions in Java:
+
+Checked Exceptions: These exceptions are checked at compile-time, which means the compiler forces the programmer to handle or declare these exceptions. Examples include IOException, SQLException, FileNotFoundException, etc.
+
+Unchecked Exceptions: Also known as runtime exceptions, these exceptions are not checked at compile-time, and the programmer is not required to handle or declare them explicitly. They occur due to programming errors or unexpected conditions during runtime. Examples include NullPointerException, ArrayIndexOutOfBoundsException, ArithmeticException, etc.
+
+Error: Errors represent serious problems that typically cannot be handled by the program. They are usually caused by external factors beyond the programmer's control. Examples include OutOfMemoryError, StackOverflowError, VirtualMachineError, etc.
+
+Custom Exceptions: Java allows programmers to create their own exception classes by extending the Exception class or one of its subclasses. Custom exceptions are useful for handling application-specific errors and conditions.
+
+It's important to note that exceptions are organized in a hierarchy, with the root class being Throwable. The Throwable class has two main subclasses: Exception and Error. All exceptions are derived from the Exception class, and all errors are derived from the Error class.
+
+https://www.javatpoint.com/exception-vs-error-in-java
+
+Checked vs Unchecked
+S.No	Checked Exception	Unchecked Exception
+1.	These exceptions are checked at compile time. These exceptions are handled at compile time too.	
+    These exceptions are just opposite to the checked exceptions. These exceptions are not checked and handled at compile time.
+2.	These exceptions are direct subclasses of exception but not extended from RuntimeException class.	
+    They are the direct subclasses of the RuntimeException class.
+3.	The code gives a compilation error in the case when a method throws a checked exception. The compiler is not able to handle the exception on its own.	
+    The code compiles without any error because the exceptions escape the notice of the compiler. These exceptions are the results of user-created errors in programming logic.
+4.	These exceptions mostly occur when the probability of failure is too high.	
+    These exceptions occur mostly due to programming mistakes.
+5.	Common checked exceptions include IOException, DataAccessException, InterruptedException, etc.	
+    Common unchecked exceptions include ArithmeticException, InvalidClassException, NullPointerException, etc.
+6.	These exceptions are propagated using the throws keyword.	
+    These are automatically propagated.
+7.	It is required to provide the try-catch and try-finally block to handle the checked exception.	
+    In the case of unchecked exception it is not mandatory.

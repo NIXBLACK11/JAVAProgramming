@@ -10,18 +10,23 @@ class A
 	{
 		System.out.println(a);
 	}
+	void met()
+	{
+		System.out.println("met through super");
+	}
 }
 
 class B extends A
 {
 	void callA(int a)
 	{
+		super.met();
 // 		super(a);
 //		Implicit super constructor A() is undefined for default constructor. Must define an explicit constructor
 	}
 }
 
-public class P8_Task03_UseOfSuperKeywordInMethod {
+public class P8_Task03_UseOfSuperKeywordInMethod{
 
 	/*
 	 * - try to call super() from method area

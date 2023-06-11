@@ -18,7 +18,7 @@ import java.util.Scanner;
 public class P12_Task01_ExceptionHanding {
     public static void main(String[] args) {
         FunctionsOfException obj = new FunctionsOfException();
-        // obj.basicException();
+        obj.basicException();
         obj.handleException();
         obj.multipleCatch();
         obj.inputMismatchException();
