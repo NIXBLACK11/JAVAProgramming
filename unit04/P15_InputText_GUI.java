@@ -6,6 +6,14 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextArea;
+public class P15_InputText_GUI {
+
+	public static void main(String[] args) {
+		InputTextGUI obj=new InputTextGUI();
+
+	}
+
+}
 
 class InputTextGUI extends JFrame{
 	JTextArea ta1;
@@ -26,18 +34,12 @@ class InputTextGUI extends JFrame{
 			}
 		};
 	b1.addActionListener(al);
-	setLayout(new FlowLayout());//automate layout
+	// ta1.setBounds(0, 0, 300, 200);
+	// l.setBounds(310, 0, 100, 100);
+	// b1.setBounds(0, 210, 10, 10);
+	setLayout(new FlowLayout());//automate layout agar khud se lagana hai to upar wala use kar aur ise hata de
 	setVisible(true);//if its false you can't see GUI
 	setSize(400, 400);//set the size of each input 
 	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
-}
-
-public class P15_InputText_GUI {
-
-	public static void main(String[] args) {
-		InputTextGUI obj=new InputTextGUI();
-
-	}
-
 }

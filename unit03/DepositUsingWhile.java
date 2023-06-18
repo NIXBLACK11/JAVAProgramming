@@ -1,6 +1,4 @@
-package practice;
-
-public class Deposit {
+public class DepositUsingWhile {
     public static void main(String[] args) {
         Transactions ob = new Transactions(10000);
         

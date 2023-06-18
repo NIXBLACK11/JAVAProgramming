@@ -26,7 +26,7 @@ class Calculator extends JFrame
         add = new JButton("+");
         sub = new JButton("-");
         mul = new JButton("*");
-        div= new JButton("/");
+        div = new JButton("/");
         add(t1);
         add(t2);
         add(add);

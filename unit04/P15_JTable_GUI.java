@@ -20,6 +20,7 @@ class JTableClass extends JFrame
                            {"a", "bb", "ccc", "dddd"}};
         table = new JTable(data, column);
         table.setBounds(30, 30, 300, 100);
+        // add(table);
         JScrollPane sp = new JScrollPane(table);
         add(sp);
         setLayout(new FlowLayout());

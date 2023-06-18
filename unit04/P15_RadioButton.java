@@ -47,6 +47,10 @@ class RadioButtonClass extends JFrame
         bg.add(r1);
         bg.add(r2);
 
+        // ButtonGroup bg = new ButtonGroup();
+        // bg.add(c1);
+        // bg.add(c2);
+
         ActionListener al = new ActionListener() {//interface
 			@Override
 			public void actionPerformed(ActionEvent e) { 
