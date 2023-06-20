@@ -1,74 +1,77 @@
-public class DepositUsingWhile {
+package practice;
+
+public class depste {
     public static void main(String[] args) {
-        Transaction ob = new Transaction(1000);
+        transfer ob = new transfer(1000);
         new Thread(){
             public void run()
             {
-                ob.Withdraw(1500);
+                ob.withdraw(1500);
             }
         }.start();
         new Thread(){
             public void run()
             {
-                ob.Withdraw(1500);
+                ob.withdraw(1500);
             }
         }.start();
         new Thread(){
             public void run()
             {
-                ob.Withdraw(1500);
+                ob.withdraw(1500);
             }
         }.start();
         new Thread(){
             public void run()
             {
-                ob.Withdraw(1500);
+                ob.withdraw(1500);
             }
         }.start();
         new Thread(){
             public void run()
             {
-                ob.Withdraw(1500);
+                ob.withdraw(1500);
             }
         }.start();
         new Thread(){
             public void run()
             {
-                ob.Deposit(1000);
+                ob.deposit(1000);
             }
         }.start();
     }
 }
 
-class Transaction
+
+class transfer
 {
-    int Total;
-    Transaction(int Total)
+    int total;
+    transfer(int total)
     {
-        this.Total = Total;
+        this.total = total;
     }
-    synchronized void Deposit(int deposit)
+    public synchronized void deposit(int amt)
     {
         System.out.println("Successfully Deposited");
-        Total+=deposit;
-        System.out.println("Total is:"+Total);
+        total+=amt;
+        System.out.println("Total is:"+total);
         notifyAll();
     }
-    synchronized void Withdraw(int withdraw)
+    public synchronized void withdraw(int amt)
     {
-        while(withdraw>Total)
+        while(total-amt<0)
         {
-            try
-            {
+            try{
                 System.out.println("Insufficient balance");
                 wait();
-            }catch(InterruptedException e)
+            }
+            catch(InterruptedException e)
             {
                 System.out.println(e.getMessage());
             }
         }
         System.out.println("Successfully Withdrawed");
-        Total-=withdraw;
-        System.out.println("Total is:"+Total);
+        total-=amt;
+        System.out.println("Total is:"+total);
     }
 }

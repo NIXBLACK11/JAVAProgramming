@@ -35,6 +35,11 @@ public class P15_Task01_FileHandlignInJava
         int countChar = 0, countWord = 0, countLine = 0;
         while((ch=obj.read())!=-1)
         {
+            if(ch=='9')
+            {
+                int val = Integer.parseInt(Character.toString(ch));
+                System.out.println(val);
+            }
             if(ch==' ')
             {
                 countWord++;

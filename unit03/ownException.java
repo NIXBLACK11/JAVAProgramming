@@ -7,7 +7,7 @@ public class ownException {
         }
         catch(MyException e)
         {
-            System.out.println(e);
+            System.out.println(e.getMessage());
         }
     }
 

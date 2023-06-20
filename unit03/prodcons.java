@@ -1,16 +1,18 @@
+
+
 /*2 way  */
 
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Random;
 
-public class P14_Task04_ProducerAndConsumer 
+public class prodcons 
 {
     public static void main(String[] args) {
-        Queue<Integer> buffer = new LinkedList<Integer>();
+        Queue<Integer> buffer = new LinkedList<>();
         int maxSize = 10;
-        Thread producer = new Thread(new Producer(buffer, maxSize, "PRODUCER"));//can also be written as this
-        Thread consumer = new Consumer(buffer, maxSize, "CONSUMER");
+        Thread producer = new Thread(new Producer(buffer, maxSize), "Producer");//can also be written as this
+        Thread consumer = new Thread(new Consumer(buffer, maxSize), "Consumer");
         producer.start();
         consumer.start();
     }
@@ -20,9 +22,8 @@ class Producer extends Thread
 {
     private Queue<Integer> queue;
     private int maxSize;
-    public Producer(Queue<Integer> queue, int maxSize, String name) 
+    public Producer(Queue<Integer> queue, int maxSize) 
     {
-        super(name);
         this.queue = queue;
         this.maxSize = maxSize;
     }
@@ -59,9 +60,8 @@ class Producer extends Thread
 class Consumer extends Thread {
     private Queue<Integer> queue;
     private int maxSize;
-    public Consumer(Queue<Integer> queue, int maxSize, String name) 
+    public Consumer(Queue<Integer> queue, int maxSize) 
     {
-        super(name);
         this.queue = queue;
         this.maxSize = maxSize;
     }

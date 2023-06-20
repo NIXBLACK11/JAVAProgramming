@@ -132,7 +132,6 @@ class FunctionsOfException
             System.out.println("Finally block");
         }
     }
-
     int divide(int a, int b)throws ArithmeticException
     {
         return a/b;

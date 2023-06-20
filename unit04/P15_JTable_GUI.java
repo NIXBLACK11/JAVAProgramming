@@ -19,7 +19,7 @@ class JTableClass extends JFrame
         String data[][] = {{"0", "1" , "2"  , "3"   },
                            {"a", "bb", "ccc", "dddd"}};
         table = new JTable(data, column);
-        table.setBounds(30, 30, 300, 100);
+        //table.setBounds(30, 30, 300, 100);
         // add(table);
         JScrollPane sp = new JScrollPane(table);
         add(sp);

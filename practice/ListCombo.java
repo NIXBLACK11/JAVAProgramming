@@ -26,17 +26,17 @@ jc = new JComboBox<>(s);
 jl = new JList(s);
 b = new JButton("=");
 l = new JLabel("Day");
-ActionListener al = new ActionListener()
-{
-public void actionPerformed(ActionEvent e)
-{
+// ActionListener al = new ActionListener()
+// {
+// public void actionPerformed(ActionEvent e)
+// {
 	
-if(e.selectedIndex()!=-1)
-{	
-	result = 
-}
-}
-}
+// // if(e.selectedIndex()!=-1)
+// // {	
+// // 	result = 
+// // }
+// // }
+// // }
 
 
 
